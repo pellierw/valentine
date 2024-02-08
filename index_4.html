@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♥!Сюрприз!♥</title>
+
+    <link rel="stylesheet" href="style4.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="content">
+        <div class="base" style="background-image: url(img/five-base.png);">
+            <div class="title">третий раунд</div>
+            <div class="cond">Угадай, что здесь написано<br><br>🍏  🚽🌲💐🦎  🐸💍🦋👈💍</div>
+            <form class="form">
+                <input type="text" class="answer" id="answer">
+                <input id="elem" type="button" value=" проверить" class="check">
+                <script>
+                 elem.onclick = function check(){
+                     let row = document.getElementById("answer");
+                     let answer = row.value;
+                     let rightGuess = "я тебя люблю";
+                     let rightGuess1 = "Я тебя люблю";
+                     let rightGuess2 = "Я ТЕБЯ ЛЮБЛЮ";
+ 
+                     if((answer === rightGuess)||(answer === rightGuess1)||(answer === rightGuess2)){
+                         toastr.success("Правильно!!!");
+ 
+                         setTimeout(function(){
+                             document.getElementById('Complete_btn').style.display='flex';
+                             document.getElementById('elem').style.display='none';
+                         },2000);
+                         
+                         return;
+                     }
+                     else{
+                         toastr.error("Попробуй ещё раз... :(");
+                         return;
+                     }
+                 }
+               </script>
+             </form>
+             <button id="Complete_btn" class="hide" onclick="location.href='index_5.html'">вперёд</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</body>
+</html>

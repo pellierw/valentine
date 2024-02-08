@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: raleway_f;
+    src: url(fonts/raleway-regular.woff2);
+}
+  
+@font-face {
+    font-family: raleway_f;
+    src: url(fonts/raleway-black.woff2);
+    font-weight: 900;
+}
+  
+body{
+    background-color: #010101;
+    font-family: raleway, sans-serif;
+    line-height: 1.55;
+    overflow: hidden;
+}
+
+:root{
+    --index: calc(1vw + 1vh);
+}
+
+.base{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.layer__header{
+    z-index: 1;
+    will-change: transform;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: calc(var(--index)*-2);
+    color: rgb(244, 228, 252); 
+    text-shadow: 0 0 15px rgb(190, 174, 198); 
+    max-width: calc(var(--index)*50);
+    box-shadow: inset 2px 2px 2px 0 rgba(85, 85, 85, 0.5), 7px 7px 20px 0 rgba(0, 0, 0, .5), 4px 4px 5px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.layers__title{
+    font-size: calc(var(--index)*1.2);
+    letter-spacing: calc(var(--index)/3.5);
+}
+
+.layers_cap{
+    font-size: calc(var(--index)*.7);
+    letter-spacing: calc(var(--index)/2.25);
+}
+
+.layers__caption{
+    font-size: calc(var(--index)*2.5);
+    letter-spacing: calc(var(--index)/2.25);
+}
+
+.agrr{
+    font-size: calc(var(--index)*2.5);
+    letter-spacing: calc(var(--index)/2.25);
+    display: none;
+    color: rgb(255, 253, 230); 
+    text-shadow: 0 0 15px rgb(255, 155, 155);
+}
+
+.bt{
+    display: flex;
+    margin-top: calc(var(--index)*-5);
+    justify-content: center;
+    align-items: center;
+}
+
+.yes{
+    margin: 0 calc(var(--index)*2.5) 0 calc(var(--index)*2.5);
+    border-radius: 20px;
+    border: 0;
+    box-shadow: inset 2px 2px 2px 0 rgba(85, 85, 85, 0.5), 7px 7px 20px 0 rgba(0, 0, 0, .5), 4px 4px 5px 0 rgba(0, 0, 0, 0.5);
+    font-size: calc(var(--index)*1.2);
+    color: rgb(244, 228, 252); 
+    text-shadow: 0 0 15px rgb(190, 174, 198);  
+    background-color: rgba(41, 146, 0, 0.5);
+    cursor: pointer;
+}
+
+.no{
+    margin: 0 calc(var(--index)*2.5) 0 calc(var(--index)*2.5);
+    border-radius: 20px;
+    border: 0;
+    box-shadow: inset 2px 2px 2px 0 rgba(85, 85, 85, 0.5), 7px 7px 20px 0 rgba(0, 0, 0, .5), 4px 4px 5px 0 rgba(0, 0, 0, 0.5);   
+    font-size: calc(var(--index)*1.2);
+    color: rgb(244, 228, 252); 
+    text-shadow: 0 0 15px rgb(190, 174, 198); 
+    background-color: rgba(146, 0, 0, 0.5);
+    cursor: pointer;    
+}

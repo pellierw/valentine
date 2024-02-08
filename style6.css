@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: raleway_f;
+    src: url(fonts/raleway-regular.woff2);
+}
+  
+@font-face {
+    font-family: raleway_f;
+    src: url(fonts/raleway-black.woff2);
+    font-weight: 900;
+}
+  
+body{
+    background-color: #010101;
+    font-family: raleway, sans-serif;
+    line-height: 1.55;
+}
+
+:root{
+    --index: calc(1vw + 1vh);
+}
+
+.base{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.snow{
+    background-size: cover;
+    display: flex;
+    z-index: 1;
+}
+
+.title{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: calc(var(--index)*1.8);
+    letter-spacing: calc(var(--index)/2);
+    color: rgb(225, 233, 255);
+    text-shadow: 0 0 10px rgb(46, 57, 85);
+}
+
+.cond{
+    max-width: calc(var(--index)*30);
+    font-size: calc(var(--index)*1);
+    letter-spacing: calc(var(--index)/5);
+    margin-top: calc(var(--index)*1.25);
+    color: rgb(225, 233, 255);
+    text-shadow: 0 0 10px rgb(46, 57, 85);
+    font-weight: 550;
+}
+
+.hint{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.card {
+    width: calc(var(--index)*12);
+    height: calc(var(--index)*4);
+    perspective: 1000px;
+    margin: calc(var(--index)*.4);
+}
+
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .999s; 
+}
+
+.card:hover, .card-inner:hover{
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    background-color: rgb(174, 195, 209);
+}
+
+.card-front{
+    transform: rotateY(0deg);
+    color: rgb(208, 229, 236);
+    text-shadow: 0 0 10px rgb(225, 233, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-back{
+    transform: rotateY(180deg);
+    color: rgb(90, 149, 160);
+    text-shadow: 0 0 10px rgb(225, 233, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.answer{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: calc(var(--index)*10);
+    min-height: calc(var(--index)*2);
+    max-width: calc(var(--index)*15);
+    border-radius: 10px;
+    border: 4px double rgb(46, 57, 85);
+    color: rgb(46, 57, 85);
+    background-color: rgb(225, 255, 254);
+    box-shadow: inset 2px 2px 2px 0 rgba(85, 85, 85, 0.5),  4px 4px 5px 0 rgba(0, 0, 0, 0.5);
+    margin: calc(var(--index)*3);
+}
+
+.form{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    background: radial-gradient(circle,rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.39));
+    font-size: calc(var(--index)*.6);
+    font-weight: 900;
+    letter-spacing: calc(var(--index)/5);
+    min-width: calc(var(--index)*8);
+    max-width: calc(var(--index)*20);
+    min-height: calc(var(--index)*2);
+    max-height: calc(var(--index)*10);
+    margin: 0 auto 10px auto;
+    border: 0;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 2px 0 rgba(85, 85, 85, 0.5), 7px 7px 20px 0 rgba(0, 0, 0, .5), 4px 4px 5px 0 rgba(0, 0, 0, 0.5);
+    will-change: transform;
+    color: rgb(46, 57, 85);
+    text-shadow: 0 0 10px rgb(225, 233, 255);
+}
+
+.check:hover{
+    cursor: pointer;
+    scale: 1.15;
+    color: rgb(225, 233, 255);
+    text-shadow: 0 0 10px rgb(46, 57, 85);
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    background: radial-gradient(circle,rgba(255, 255, 255, 0.103), rgba(255, 255, 255, 0.39));
+    font-size: calc(var(--index)*1);
+    font-weight: 900;
+    letter-spacing: calc(var(--index)/5);
+    min-width: calc(var(--index)*10);
+    max-width: calc(var(--index)*20);
+    min-height: calc(var(--index)*3);
+    max-height: calc(var(--index)*10);
+    margin: 0 auto 0 auto;
+    border: 0;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 2px 0 rgba(85, 85, 85, 0.5), 7px 7px 20px 0 rgba(0, 0, 0, .5), 4px 4px 5px 0 rgba(0, 0, 0, 0.5);
+    will-change: transform;
+    color: rgb(46, 57, 85);
+    text-shadow: 0 0 10px rgb(225, 233, 255);
+}
+
+.hide{
+  display: none;
+}
+
+button:hover{
+    cursor: pointer;
+    scale: 1.15;
+    color: rgb(225, 233, 255);
+    text-shadow: 0 0 10px rgb(46, 57, 85);
+}

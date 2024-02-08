@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♥!Сюрприз!♥</title>
+    <link rel="stylesheet" href="style7.css">
+    <link rel="stylesheet" href="dist/sakura.css" />
+</head>
+<body>
+    <div class="base" style="background-image: url(img/ei-base.png);">
+        <script src="dist/sakura.js" text="text/javascript"></script>
+        <script>
+          var sakura = new Sakura('body', {
+            colors: [
+              {
+                gradientColorStart: 'rgba(229, 183, 255, 0.9)',
+                gradientColorEnd: 'rgba(239, 197, 255, 0.9)',
+                gradientColorDegree: 120,
+              },
+              {
+                gradientColorStart: 'rgba(202, 183, 255)',
+                gradientColorEnd: 'rgba(217, 197, 255)',
+                gradientColorDegree: 120,
+              },
+              {
+                gradientColorStart: 'rgba(244, 235, 255)',
+                gradientColorEnd: 'rgba(252, 244, 255)',
+                gradientColorDegree: 120,
+              },
+            ],
+            delay: 200,
+          });
+        </script>        
+        <div class="layer__header">
+          <div class="t" id="t">
+            <div class="layers__title">ты большая умничка!!!<br><br></div>
+            <div class="layers_cap">перейдём сразу к делу<br><br></div>
+            <div class="layers__caption">пойдешь со мной на свидание?<br>(○｀ 3′○)</div>
+          </div>           
+          <div class="agrr" id="agrr">ура!!!!</div>
+        </div>
+        <div class="bt">
+            <input type="button" class="no" id="noo" style="width: 250px; height: 150px;" onclick="this.style.width = parseInt(this.style.width)-10+'px'; this.style.height = parseInt(this.style.height)-10+'px'; yess.style.width = parseInt(yess.style.width)+10+'px'; yess.style.height = parseInt(yess.style.height)+10+'px';" value="нет..."/>
+            <input type="button" class="yes" id="yess" style="width: 250px; height: 150px;" value="ДА!!!"/>
+            <script type="module">
+                yess.onclick = function check(){
+                  document.getElementById('agrr').style.display='grid';
+                  document.getElementById('t').style.display='none';
+                  document.getElementById('noo').style.display='none';
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

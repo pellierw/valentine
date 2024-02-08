@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>♥!Сюрприз!♥</title>
+
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="../script.js" type="module" defer></script>
+    <link rel="stylesheet" href="dist/sakura.css" />
+</head>
+<body>
+    <div class="content">
+        <article class="main-article" style="background-image: url(img/th-base.png);">
+            <script src="dist/sakura.js" text="text/javascript"></script>
+            <script>
+              var sakura = new Sakura('body', {
+                colors: [
+                {
+                  gradientColorStart: 'rgba(255, 183, 197, 0.9)',
+                  gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+                  gradientColorDegree: 120,
+                },
+                {
+                  gradientColorStart: 'rgba(255,189,189)',
+                  gradientColorEnd: 'rgba(227,170,181)',
+                  gradientColorDegree: 120,
+                },
+                {
+                  gradientColorStart: 'rgba(212,152,163)',
+                  gradientColorEnd: 'rgba(242,185,196)',
+                  gradientColorDegree: 120,
+                },
+                ],
+                delay: 200,
+              });
+            </script>
+            <div id="void" class="void">
+                <h1 class="main-article__header"> первый раунд </h1>
+                <p class="main-article__paragraph">игра 5 букв<br> </p>
+                <div class="game">
+                  <div id="game-board">
+                  </div>
+                  <button id="Complete_btn" class="hide" onclick="location.href='index_3.html'">вперёд</button>
+                </div>
+            </div>
+        </article>
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../script.js" type="module">
+</script>
+</body>
+</html>
