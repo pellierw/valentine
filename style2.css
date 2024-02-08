@@ -115,33 +115,6 @@ body{
   max-height: calc(var(--index)*5);
 }
 
-#keyboard-cont {
-  margin-top: 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: -5px;
-}
-
-#keyboard-cont div {
-  display: flex;
-}
-
-.second-row {
-  margin: 0;
-}
-
-.keyboard-button {
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 0.5rem;
-  margin: 1px;
-  cursor: pointer;
-  text-transform: uppercase;
-  min-width:fit-content;
-  min-height: fit-content;
-}
-
 button{
  display: flex;
  align-items: center;
