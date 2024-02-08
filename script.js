@@ -134,6 +134,7 @@ function checkGuess () {
         guessesRemaining = 0;
 
         document.getElementById('void').style.margin='0';
+        document.getElementById('keyboard-cont').style.display='none';
 
         setTimeout(function(){
             document.getElementById('Complete_btn').style.display='flex';
