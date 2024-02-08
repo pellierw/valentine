@@ -1,5 +1,5 @@
 // импортируем слова из файла
-import { WORDS } from "/word.js";
+import { WORDS } from "word.js";
 
 // количество попыток
 const NUMBER_OF_GUESSES = 6;
