@@ -1,6 +1,3 @@
-// импортируем слова из файла
-import { WORDS } from "/word.js";
-
 // количество попыток
 const NUMBER_OF_GUESSES = 6;
 // сколько попыток осталось
@@ -10,13 +7,9 @@ let currentGuess = [];
 // следующая буква
 let nextLetter = 0;
 // загаданное слово
-let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
+let rightGuessString = "котик";
 // на всякий случай выведем в консоль загаданное слово, чтобы проверить, как работает игра
 console.log(rightGuessString)
-
-const ans = rightGuessString;
-
-export {ans};
 
 // создаём игровое поле
 function initBoard() {
