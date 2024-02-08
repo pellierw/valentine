@@ -221,44 +221,4 @@ document.addEventListener("keydown", (e) => {
     }
 })
 
-// обработчик нажатий на экранную клавиатуру
-document.getElementById("keyboard-cont").addEventListener("click", (e) => {
-    // получаем нажатый элемент
-    const target = e.target
-    
-    // если нажали не на нашу клавиатуру — выходим из обработчика
-    if (!target.classList.contains("keyboard-button")) {
-        return
-    }
-    // получаем текст нажатой кнопки
-    let key = target.textContent
 
-    // имитируем нажатие этой кнопки на настоящей клавиатуре
-    document.dispatchEvent(new KeyboardEvent("keydown", {'key': key}))
-})
-
-// подсвечиваем кнопки на экранной клавиатуре
-function shadeKeyBoard(letter, color) {
-    // перебираем все кнопки виртуальной клавиатуры
-    for (const elem of document.getElementsByClassName("keyboard-button")) {
-        // если текст на кнопке совпадает с текущей буквой
-        if (elem.textContent === letter) {
-            // запоминаем текцщий цвет буквы
-            let oldColor = elem.style.backgroundColor
-            // если она была зелёной — оставляем как есть и выходим из функции
-            if (oldColor === 'rgba(188, 130, 255, 0.8)') {
-                return
-            } 
-
-            // если текущий цвет — жёлтый, а новый — не зелёный, то тоже оставляем как есть и выходим из функции
-            if (oldColor === 'rgb(255, 179, 245, .8)' && color !== 'rgba(188, 130, 255, 0.8)') {
-                return
-            }
-
-            // делаем кнопку на клавиатуре того же цвета, что и соответствующая буква на игровом поле
-            elem.style.backgroundColor = color;
-            // выходим из цикла
-            break
-        }
-    }
-}
